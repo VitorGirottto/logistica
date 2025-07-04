@@ -1,140 +1,74 @@
 # Sistema de Logística
 
-Sistema completo de gestão logística desenvolvido em PHP puro, HTML, CSS e JavaScript.
+Este sistema tem como objetivo gerenciar operações logísticas, incluindo controle de entregas, motoristas, veículos, roteirização, notas fiscais e financeiro (contas a pagar e a receber).
 
-## Funcionalidades
+## ⚙️ Estrutura
 
-- ✅ Sistema de login com autenticação
-- ✅ Gestão de usuários com perfil editável
-- ✅ CRUD completo para entregas, motoristas e veículos
-- ✅ 12 dashboards dinâmicos com dados reais
-- ✅ Layout responsivo com menu lateral
-- ✅ Design roxo e amarelo
-- ✅ Proteção contra SQL Injection
-- ✅ Sistema de sessões seguro
+- O projeto **não utiliza um padrão de arquitetura como MVC**, o que torna a organização e a manutenção menos seguras e menos escaláveis.
+- Todos os arquivos PHP estão misturados na raiz ou em pastas de includes.
+- O código não faz separação clara entre regras de negócio, apresentação (views) e acesso a dados.
 
-## Tecnologias Utilizadas
+## 📂 Principais diretórios e arquivos
 
-- **Backend**: PHP 7.4+
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Banco de Dados**: MySQL 5.7+
-- **Gráficos**: Chart.js
-- **Ícones**: Font Awesome
+- `config/`
+  - `config.php`: configurações gerais do sistema.
+  - `database.php`: **arquivo onde é feita a configuração do banco de dados** (alterar credenciais aqui conforme ambiente).
+  - `logistica.sql`: **arquivo SQL** com a estrutura do banco de dados (tabelas, inserts iniciais).
+- `css/`: arquivos de estilo para telas e componentes.
+- `includes/`: includes reutilizáveis (ex.: sidebar, verificação de login).
+- `*.php`: páginas principais do sistema (dashboard, login, motoristas, entregas, etc.).
 
-## Instalação
+## 💡 Observação de segurança
 
-### 1. Requisitos
+> ❗ **Atenção:** O sistema não possui uma estrutura estratégica segura. Falta:
+>
+> - Separação de camadas (MVC).
+> - Proteção contra SQL Injection.
+> - Tratamento adequado de sessões e autenticação.
+> - Sanitização e validação de dados.
+>
+> Recomenda-se implementar padrões como MVC ou frameworks que ofereçam camadas de abstração e segurança (ex.: Laravel, Symfony).
 
-- PHP 7.4 ou superior
-- MySQL 5.7 ou superior
-- Apache ou Nginx
-- Extensões PHP: PDO, PDO_MySQL
+## 🚀 Executando
 
-### 2. Configuração do Banco de Dados
+1. **Configurar banco de dados**
+   - Crie um banco no seu servidor MySQL.
+   - Importe o arquivo `logistica.sql` para criar as tabelas e inserir dados iniciais.
 
-1. Crie um banco de dados MySQL:
-\`\`\`sql
-CREATE DATABASE logistica;
-\`\`\`
+2. **Editar configuração de conexão**
+   - No arquivo `config/database.php`, ajuste:
+     ```php
+     $host = "localhost";
+     $dbname = "nome_do_banco";
+     $user = "usuario";
+     $pass = "senha";
+     ```
+3. **Acessar via navegador**
+   - Inicie seu servidor local (XAMPP, WAMP, etc.).
+   - Acesse `http://localhost/logistica`.
 
-2. Execute o script SQL localizado em `config/logistica.sql`
+## 📸 Tela principal
 
-3. Configure a conexão no arquivo `config/database.php`:
-\`\`\`php
-private $host = 'localhost';
-private $db_name = 'sistema_logistica';
-private $username = 'seu_usuario';
-private $password = 'sua_senha';
-\`\`\`
+![Dashboard](image.png)
 
-### 3. Configuração do Servidor
+## ✅ Funcionalidades
 
-1. Clone ou baixe os arquivos para o diretório do servidor web
-2. Configure as permissões adequadas
-3. Acesse o sistema pelo navegador
+- Dashboard geral com gráficos.
+- Controle de entregas (pendentes, em trânsito, entregues, atrasadas).
+- Cadastro e gerenciamento de motoristas.
+- Controle de veículos.
+- Controle financeiro (contas a pagar e a receber).
+- Perfil do usuário.
 
-### 4. Login Padrão
+---
 
-- **E-mail**: admin@logistica.com
-- **Senha**: password
+## 📢 Melhorias recomendadas
 
-## Estrutura do Projeto
+- Refatorar usando MVC para separar lógica, visual e dados.
+- Adicionar uso de prepared statements ou ORM para evitar SQL Injection.
+- Adicionar camadas de validação e sanitização.
+- Implementar um sistema de permissões mais robusto.
 
-\`\`\`
-sistema-logistica/
-├── config/
-│   ├── config.php
-│   └── database.php
-├── css/
-│   ├── style.css
-│   └── login.cssx
-├── includes/
-│   ├── sidebar.php
-│   └── verificaLogin.php
-├── js/
-│   └── dashboard.js
-├── dashboard.php
-├── entregas.php
-├── motoristas.php
-├── veiculos.php
-├── roteirizacao.php
-├── perfil.php
-├── login.php
-├── logout.php
-├── index.php
-└── README.md
-\`\`\`
+---
 
-## Funcionalidades CRUD
-
-### Entregas
-- Criar nova entrega
-- Editar entrega existente
-- Excluir entrega
-- Visualizar lista completa
-- Filtros e busca
-
-### Motoristas
-- Cadastrar motorista
-- Editar dados do motorista
-- Ativar/desativar motorista
-- Excluir motorista (se não tiver entregas)
-
-### Veículos
-- Cadastrar veículo
-- Editar informações do veículo
-- Alterar status (Ativo/Inativo/Manutenção)
-- Excluir veículo (se não tiver entregas)
-
-### Usuários
-- Editar perfil próprio
-- Alterar senha
-- Excluir conta própria
-
-## Segurança
-
-- Prepared statements para prevenir SQL Injection
-- Validação e sanitização de dados
-- Sistema de sessões seguro
-- Proteção de arquivos sensíveis via .htaccess
-- Headers de segurança configurados
-
-## Personalização
-
-### Cores do Tema
-As cores principais podem ser alteradas no arquivo `css/style.css`:
-- Roxo: `#8B5CF6`
-- Amarelo: `#F59E0B`
-
-Este sistema de logística completo inclui todas as funcionalidades solicitadas:
-
-✅ **Sistema de Login** - Autenticação segura com sessões
-✅ **Gestão de Usuários** - Perfil editável e exclusão de conta
-✅ **Layout Responsivo** - Menu lateral fixo com design roxo/amarelo
-✅ **6 Dashboards Dinâmicos** - Todos com dados reais do MySQL
-✅ **CRUD Completo** - Para entregas, motoristas e veículos
-✅ **Banco de Dados MySQL** - Com estrutura completa e dados de exemplo
-✅ **Segurança** - Prepared statements e proteções
-✅ **Organização** - Estrutura de pastas bem definida
-
-O sistema está pronto para uso e pode ser facilmente expandido com novas funcionalidades!
+👨‍💻 **Desenvolvido para estudos e demonstração de funcionalidades básicas.**
