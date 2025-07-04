@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Aplicar apenas quando a classe estiver presente */
+.perfil-clean {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Container principal */
+.perfil-clean .content-area {
+  background: #f8fafc;
+  min-height: calc(100vh - 80px);
+  padding: 32px;
+}
+
+/* Cards modernos e limpos */
+.perfil-clean .form-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+}
+
+.perfil-clean .form-container:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Títulos limpos */
+.perfil-clean .form-container h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+  letter-spacing: -0.025em;
+}
+
+/* Grid responsivo */
+.perfil-clean .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* Grupos de formulário */
+.perfil-clean .form-group {
+  margin-bottom: 20px;
+}
+
+.perfil-clean .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #374151;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.025em;
+}
+
+/* Inputs modernos e limpos */
+.perfil-clean .form-group input,
+.perfil-clean .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.perfil-clean .form-group input:focus,
+.perfil-clean .form-group textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  background: #fefefe;
+}
+
+.perfil-clean .form-group input::placeholder,
+.perfil-clean .form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.perfil-clean .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* Botões modernos e minimalistas */
+.perfil-clean .btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.025em;
+}
+
+.perfil-clean .btn-primary {
+  background: #8b5cf6;
+  color: white;
+  border: 1px solid #8b5cf6;
+}
+
+.perfil-clean .btn-primary:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+.perfil-clean .btn-warning {
+  background: #f59e0b;
+  color: white;
+  border: 1px solid #f59e0b;
+}
+
+.perfil-clean .btn-warning:hover {
+  background: #d97706;
+  border-color: #d97706;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+}
+
+.perfil-clean .btn-danger {
+  background: #ef4444;
+  color: white;
+  border: 1px solid #ef4444;
+}
+
+.perfil-clean .btn-danger:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+/* Card de informações */
+.perfil-clean .info-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.perfil-clean .info-container h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.perfil-clean .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.perfil-clean .info-item {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.perfil-clean .info-item:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.perfil-clean .info-item strong {
+  display: block;
+  color: #475569;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.perfil-clean .info-item div {
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Zona de perigo minimalista */
+.perfil-clean .danger-zone {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+}
+
+.perfil-clean .danger-zone h3 {
+  color: #dc2626;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border: none;
+  padding: 0;
+}
+
+.perfil-clean .danger-zone p {
+  color: #7f1d1d;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Alertas limpos */
+.perfil-clean .alert {
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.perfil-clean .alert-success {
+  background: #f0fdf4;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.perfil-clean .alert-error {
+  background: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.perfil-clean .alert-warning {
+  background: #fffbeb;
+  color: #d97706;
+  border-color: #fed7aa;
+}
+
+/* Modal limpo */
+.perfil-clean .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-clean .modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.perfil-clean .modal-content h3 {
+  color: #dc2626;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  padding: 0;
+}
+
+.perfil-clean .modal-content p {
+  color: #475569;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.perfil-clean .modal-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .perfil-clean .content-area {
+    padding: 20px;
+  }
+
+  .perfil-clean .form-container,
+  .perfil-clean .info-container {
+    padding: 24px;
+  }
+
+  .perfil-clean .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .perfil-clean .info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .perfil-clean .modal-buttons {
+    flex-direction: column;
+  }
+
+  .perfil-clean .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Melhorias sutis na tipografia */
+.perfil-clean h1,
+.perfil-clean h2,
+.perfil-clean h3 {
+  letter-spacing: -0.025em;
+}
+
+.perfil-clean .page-title {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Estados de loading sutis */
+.perfil-clean .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Animações sutis */
+.perfil-clean .form-container,
+.perfil-clean .info-container,
+.perfil-clean .danger-zone {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Melhorias no top-bar */
+.perfil-clean .top-bar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}

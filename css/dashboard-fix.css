@@ -1,0 +1,51 @@
+/* Correções específicas para os gráficos */
+.chart-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  min-height: 400px; /* Altura mínima garantida */
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid dos gráficos com altura fixa */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Garantir que os canvas tenham tamanho adequado */
+.chart-wrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.chart-wrapper canvas {
+  max-height: 300px !important;
+  max-width: 100% !important;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    min-height: 350px;
+  }
+
+  .chart-wrapper {
+    height: 250px;
+  }
+}
